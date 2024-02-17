@@ -45,7 +45,7 @@ export default function About() {
 					</div>
 				</div>
 				<div className='flex justify-end'>
-					<img src='/Untitled-1.jpg' alt='' className='h-210 w-200 object-contain' />
+					<img src='/Untitled-1.jpg' alt='' className='h-200 w-190 object-contain' />
 				</div>
 			</div>
 		</div>
