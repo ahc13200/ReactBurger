@@ -2,7 +2,7 @@ import {Icon} from '@iconify/react';
 
 export default function About() {
 	const classNameButton =
-		'border-transparent text-xl p3 rounded-2xl bg-stone-300/20 hover:bg-stone-300/10 cursor-pointer';
+		'border-transparent text-xl p3 rounded-2xl bg-stone-300/10 hover:bg-stone-300/20 cursor-pointer';
 	return (
 		<div className='pt-32 mx-40'>
 			<div className='grid grid-cols-2'>

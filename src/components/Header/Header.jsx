@@ -23,8 +23,9 @@ export default function Header() {
 						<NavLink to='/about' className={({isActive}) => (isActive ? 'text-yellow-400' : 'no-underline')}>
 							<ItemHeader>About</ItemHeader>
 						</NavLink>
-
-						<ItemHeader>Shop</ItemHeader>
+						<NavLink to='/shop' className={({isActive}) => (isActive ? 'text-yellow-400' : 'no-underline')}>
+							<ItemHeader>Shop</ItemHeader>
+						</NavLink>
 					</ul>
 					<ul className='flex wrap list-none gap-8 text-3xl justify-end'>
 						<ItemHeader>

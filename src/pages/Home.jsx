@@ -23,13 +23,13 @@ export default function Home() {
 						</p>
 					</div>
 
-					<div className='flex gap-20'>
+					<div className='flex gap-10'>
 						<button className='text-lg p-4 w-50 mt-10 bg-orange-500 border-orange-400 rounded-xl hover:text-yellow-400 hover:scale-105 transition duration-300 ease-in-out'>
 							Order now
 						</button>
 						<button
 							onClick={goToMenu}
-							className='text-lg bg-transparent border-none mt-10 text-yellow-400 hover:text-orange-400/90 hover:scale-125 transition duration-300 ease-in-out'
+							className='bg-transparent w-40 rounded-xl text-lg border-none mt-10 text-yellow-400 hover:bg-stone-300/10 transition duration-300 ease-in-out cursor-pointer'
 						>
 							View Menu
 						</button>
