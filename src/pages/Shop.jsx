@@ -1,5 +1,7 @@
 import {useState} from 'react';
+
 import TabButton from '../components/Shop/TabButton';
+import TabContent from '../components/Shop/TabContent';
 
 export default function Shop() {
 	const [selectedItem, setSelectedItem] = useState('Drinks');
@@ -30,6 +32,9 @@ export default function Shop() {
 						</TabButton>
 					</div>
 				</div>
+			</div>
+			<div className='mt-10 grid grid-cols-5 gap-10'>
+				<TabContent />
 			</div>
 		</div>
 	);

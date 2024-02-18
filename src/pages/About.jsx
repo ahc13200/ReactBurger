@@ -6,7 +6,7 @@ export default function About() {
 	return (
 		<div className='pt-32 mx-40'>
 			<div className='grid grid-cols-2'>
-				<div className='mt-15 text-2xl text-justify'>
+				<div className='mt-15 text-2xl'>
 					<h1>About us</h1>
 					<p>
 						Our story began with a simple idea: to reinvent the classic burger using technology and creativity as our
