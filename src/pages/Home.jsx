@@ -8,11 +8,11 @@ export default function Home() {
 	}
 
 	const classNameCard =
-		'h-40 w-40 rounded-2xl border border-solid border-1 hover:border-yellow-500 hover:scale-120 transition duration-300 ease-in-out';
+		'h-40 w-40 rounded-2xl border border-solid border-1 border-white:20 hover:border-yellow-500 hover:scale-110 transition duration-300 ease-in-out';
 
 	return (
 		<>
-			<div className='mx-40 grid grid-cols-2 pt-32'>
+			<div className='px-40 grid grid-cols-2 pt-32'>
 				<div className='mt-15'>
 					<div className='text-left'>
 						<h1 className='font-serif uppercase text-5xl'>the ultimate burger haven</h1>
@@ -24,7 +24,7 @@ export default function Home() {
 					</div>
 
 					<div className='flex gap-5'>
-						<button className='text-xl p-4 w-50 mt-10 bg-gradient-to-r from-yellow-500 to-yellow-600 border-none rounded-3xl hover:scale-110 transition duration-300 ease-in-out'>
+						<button className='text-xl p-4 w-50 mt-10 bg-gradient-to-r from-yellow-500 to-yellow-600 border-none rounded-3xl transition-all duration-300 hover:(from-yellow-400 to-yellow-700) cursor-pointer'>
 							Order now
 						</button>
 						<button

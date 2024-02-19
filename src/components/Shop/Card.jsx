@@ -1,9 +1,22 @@
 import {Icon} from '@iconify/react';
 
-export default function Card({name, price, image}) {
+export default function Card({name, price, image, isMenu}) {
 	return (
-		<div className='border border-solid border-1 border-stone-300 rounded-3xl'>
-			<img src={image} alt='' className='rounded-3xl w-full' />
+		<div className=' rounded-3xl p3 bg-white:10 group'>
+			<div className='overflow-hidden rounded-3xl '>
+				<img
+					src={image}
+					alt=''
+					className='w-full hfull transform scale-105 group-hover:scale-110 transition-all duration-300'
+				/>
+			</div>
+			{isMenu && (
+				<div className='flex justify-end'>
+					<span className='absolute bg-yellow-400/80 top-48 text-xl w-20 mx-3 my-5 text-center rounded-3xl w-25 font-bold cursor-pointer hover:bg-yellow-400/90'>
+						Details
+					</span>
+				</div>
+			)}
 			<h2 className='text-center text-3xl mb-0'>{name}</h2>
 			<div className='mx-5 grid grid-flow-col grid-cols-2'>
 				<h1>$ {price}</h1>
