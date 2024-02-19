@@ -18,7 +18,7 @@ export default function Header() {
 							<ItemHeader>Home</ItemHeader>
 						</NavLink>
 						<NavLink to='/menu' className={({isActive}) => (isActive ? 'text-yellow-400' : 'no-underline')}>
-							<ItemHeader>Manu</ItemHeader>
+							<ItemHeader>Menu</ItemHeader>
 						</NavLink>
 						<NavLink to='/about' className={({isActive}) => (isActive ? 'text-yellow-400' : 'no-underline')}>
 							<ItemHeader>About</ItemHeader>
