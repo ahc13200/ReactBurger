@@ -34,7 +34,7 @@ export default function Shop() {
 				</div>
 			</div>
 			<div className='mt-10 grid grid-cols-5 gap-10'>
-				<TabContent />
+				<TabContent selectedTopic={selectedItem} />
 			</div>
 		</div>
 	);

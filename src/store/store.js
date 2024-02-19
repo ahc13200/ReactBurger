@@ -1,0 +1,186 @@
+export const SHOP_PRODUCTS = {
+	Drinks: [
+		{
+			id: 0,
+			name: '7up',
+			image: '/drinks/7up.jpeg',
+			price: 100,
+		},
+		{
+			id: 1,
+			name: '7up',
+			image: '/drinks/7up1.jpeg',
+			price: 100,
+		},
+		{
+			id: 2,
+			name: 'Coca Cola',
+			image: '/drinks/cocaCola.jpeg',
+			price: 150,
+		},
+		{
+			id: 3,
+			name: 'Coca cola',
+			image: '/drinks/cocaCola2.jpeg',
+			price: 150,
+		},
+		{
+			id: 4,
+			name: 'Fanta',
+			image: '/drinks/fanta.jpeg',
+			price: 100,
+		},
+		{
+			id: 5,
+			name: 'Fanta',
+			image: '/drinks/fanta2.jpeg',
+			price: 100,
+		},
+		{
+			id: 6,
+			name: 'Pepsi Cola',
+			image: '/drinks/pepsi.jpeg',
+			price: 200,
+		},
+		{
+			id: 7,
+			name: 'Pepsi Cola',
+			image: '/drinks/pepsi2.jpeg',
+			price: 200,
+		},
+	],
+	Chips: [
+		{
+			id: 0,
+			name: 'Lays',
+			image: '/chips/chips.jpeg',
+			price: 300,
+		},
+		{
+			id: 1,
+			name: 'Lays',
+			image: '/chips/chips2.jpeg',
+			price: 300,
+		},
+		{
+			id: 2,
+			name: 'Lays',
+			image: '/chips/chips3.jpeg',
+			price: 300,
+		},
+		{
+			id: 3,
+			name: 'Pot of chips',
+			image: '/chips/papas.jpeg',
+			price: 500,
+		},
+		{
+			id: 4,
+			name: 'Pot of chips',
+			image: '/chips/papas2.jpeg',
+			price: 500,
+		},
+		{
+			id: 5,
+			name: 'Pringles',
+			image: '/chips/pringles.jpeg',
+			price: 950,
+		},
+		{
+			id: 6,
+			name: 'Pringles',
+			image: '/chips/pringles1.jpeg',
+			price: 950,
+		},
+		{
+			id: 7,
+			name: 'Pringles',
+			image: '/chips/pringles3.jpeg',
+			price: 950,
+		},
+	],
+	Chocolates: [
+		{
+			id: 0,
+			name: 'Chocolates',
+			image: '/chocolates/chocos.jpeg',
+			price: 2500,
+		},
+		{
+			id: 1,
+			name: 'Chocolates',
+			image: '/chocolates/chocos1.jpeg',
+			price: 2000,
+		},
+		{
+			id: 2,
+			name: 'Chocolates',
+			image: '/chocolates/chocos2.jpeg',
+			price: 3000,
+		},
+	],
+	Coockies: [
+		{
+			id: 0,
+			name: 'Coockies',
+			image: '/coockies/coockies.jpeg',
+			price: 800,
+		},
+		{
+			id: 1,
+			name: 'Coockies',
+			image: '/coockies/coockies2.jpeg',
+			price: 800,
+		},
+		{
+			id: 2,
+			name: 'Coockies',
+			image: '/coockies/coockies3.jpeg',
+			price: 800,
+		},
+		{
+			id: 3,
+			name: 'Coockies',
+			image: '/coockies/coockies4.jpeg',
+			price: 800,
+		},
+		{
+			id: 4,
+			name: 'Coockies',
+			image: '/coockies/coockies5.jpeg',
+			price: 800,
+		},
+	],
+	Menu: [
+		{
+			id: 0,
+			name: 'Burger Mixt',
+			image: '/OIG4.jpeg',
+			price: 300,
+		},
+		{
+			id: 1,
+			name: 'McDonalds',
+			image: '/OIG3.jpeg',
+			price: 1000,
+		},
+		{
+			id: 2,
+			name: 'Combo Mixt',
+			image: '/OIG2.er_9CnJYu8lLnV.jpeg',
+			price: 1500,
+		},
+		{
+			id: 3,
+			name: 'Big Burger',
+			image: '/OIG2.jpeg',
+			price: 850,
+		},
+		{
+			id: 4,
+			name: 'Jamon Burger',
+			image: '/imageRigth.jpeg',
+			price: 500,
+		},
+	],
+};
