@@ -21,14 +21,14 @@ export default function Header() {
 	return (
 		<>
 			{/* <ModalCart ref={modal} /> */}
-			<header className='fixed z-999 backdrop-blur-lg w-full h-30 flex items-center'>
+			<header className='fixed z-999 backdrop-blur-lg w-full h-20 flex items-center pb-0 pt-5'>
 				<nav className='wfull'>
-					<div className='justify-between px-40 flex pt-8'>
+					<div className='justify-between px-40 flex'>
 						<img
 							src='/logo.png'
-							className='h-20 w-20 object-contain hover:scale-125 transition duration-300 ease-in-out'
+							className='mt-4 h-20 w-20 object-contain hover:scale-125 transition duration-300 ease-in-out'
 						/>
-						<ul className='flex wrap list-none gap-5 text-2xl font-semibold'>
+						<ul className='flex wrap list-none gap-5 text-4xl md:text-2xl font-semibold'>
 							{header.map((item) => {
 								return (
 									<NavLink
