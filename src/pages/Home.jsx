@@ -8,7 +8,7 @@ export default function Home() {
 	}
 
 	const classNameCard =
-		'h-40 w-40 rounded-2xl border border-solid border-1 border-white:20 hover:border-yellow-500 hover:scale-110 transition duration-300 ease-in-out';
+		'h-40 w-40 rounded-2xl border border-solid border-1 border-white:20 hover:border-yellow-500 transition duration-300 ease-in-out';
 
 	return (
 		<>

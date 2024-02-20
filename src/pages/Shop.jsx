@@ -11,7 +11,7 @@ export default function Shop() {
 	}
 
 	return (
-		<div className='pt-32 px-40'>
+		<div className='pt-32 px-40 pb-20'>
 			<div className='mt-15 grid grid-cols-2'>
 				<div>
 					<h2 className='text-3xl font-semibold'>{selectedItem}</h2>
