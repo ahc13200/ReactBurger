@@ -20,7 +20,7 @@ export default function Header() {
 
 	return (
 		<>
-			{/* <ModalCart ref={modal} /> */}
+			<ModalCart ref={modal} name='amanda' />
 			<header className='fixed z-999 backdrop-blur-lg w-full h-20 flex items-center pb-0 pt-5'>
 				<nav className='wfull'>
 					<div className='justify-between px-40 flex'>
