@@ -21,14 +21,14 @@ export default function Header() {
 	return (
 		<>
 			<ModalCart ref={modal} name='amanda' />
-			<header className='fixed z-999 backdrop-blur-lg w-full h-20 flex items-center pb-0 pt-5'>
+			<header className='fixed z-999 backdrop-blur-lg w-full h-20 flex items-center pb-1 pt-5'>
 				<nav className='wfull'>
-					<div className='justify-between px-40 flex'>
+					<div className='justify-between px-20 flex'>
 						<img
 							src='/logo.png'
-							className='mt-4 h-20 w-20 object-contain hover:scale-125 transition duration-300 ease-in-out'
+							className='mt-4 h-15 w-15 object-contain hover:scale-125 transition duration-300 ease-in-out'
 						/>
-						<ul className='flex wrap list-none gap-5 text-4xl md:text-2xl font-semibold'>
+						<ul className='flex wrap list-none gap-5 text-xl font-semibold'>
 							{header.map((item) => {
 								return (
 									<NavLink
@@ -41,7 +41,7 @@ export default function Header() {
 								);
 							})}
 						</ul>
-						<ul className='flex wrap list-none gap-8 text-3xl justify-end'>
+						<ul className='flex wrap list-none text-2xl justify-end'>
 							<ItemHeader>
 								<Icon icon='iconamoon:profile-fill' />
 							</ItemHeader>

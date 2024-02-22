@@ -2,11 +2,11 @@ import {Icon} from '@iconify/react';
 
 export default function About() {
 	const classNameButton =
-		'border-transparent text-xl p3 rounded-2xl bg-stone-300/10 hover:bg-stone-300/20 cursor-pointer transition-all duration-300';
+		'border-transparent text-lg p3 rounded-2xl bg-stone-300/10 hover:bg-stone-300/20 cursor-pointer transition-all duration-300';
 	return (
-		<div className='pt-32 mx-40'>
-			<div className='grid grid-cols-2'>
-				<div className='mt-15 text-2xl'>
+		<div>
+			<div flex gap-30 mt15 w-full>
+				<div w='3/5' text-xl>
 					<h1>About us</h1>
 					<p>
 						Our story began with a simple idea: to reinvent the classic burger using technology and creativity as our
@@ -44,8 +44,8 @@ export default function About() {
 						</div>
 					</div>
 				</div>
-				<div className='flex justify-end'>
-					<img src='/Untitled-1.jpg' alt='' className='h-200 w-190 object-contain' />
+				<div className='w-1/3 invisible lg:visible flex justify-end'>
+					<img src='/Untitled-1.jpg' alt='' className='h-full w-full object-contain' />
 				</div>
 			</div>
 		</div>

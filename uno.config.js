@@ -9,6 +9,7 @@ import {
 	transformerDirectives,
 	transformerVariantGroup,
 } from 'unocss';
+import transformerAttributifyJsx from '@unocss/transformer-attributify-jsx';
 
 export default defineConfig({
 	presets: [
@@ -25,5 +26,5 @@ export default defineConfig({
 			},
 		}),
 	],
-	transformers: [transformerDirectives(), transformerVariantGroup()],
+	transformers: [transformerDirectives(), transformerVariantGroup(), transformerAttributifyJsx()],
 });

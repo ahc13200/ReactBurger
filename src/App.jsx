@@ -33,7 +33,7 @@ const router = createBrowserRouter([
 
 function App() {
 	return (
-		<main className='min-w-screen-xl'>
+		<main className='lg:min-w-screen-xl'>
 			<RouterProvider router={router} />
 		</main>
 	);

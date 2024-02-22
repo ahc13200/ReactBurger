@@ -7,46 +7,54 @@ export default function Home() {
 		navigate('/menu');
 	}
 
-	const classNameCard =
-		'h-40 w-40 rounded-2xl border border-solid border-1 border-white:20 hover:border-yellow-500 transition duration-300 ease-in-out';
-
+	const images = [
+		{image: '/OIG4.jpeg'},
+		{image: '/imageRigth.jpeg'},
+		{image: '/OIG2.er_9CnJYu8lLnV.jpeg'},
+		{image: '/OIG3.jpeg'},
+		{image: '/OIG3.jpeg'},
+	];
 	return (
 		<>
-			<div className='px-40 grid grid-cols-2 pt-32'>
-				<div className='mt-15'>
-					<div className='text-left'>
-						<h1 className='font-serif uppercase text-5xl'>the ultimate burger haven</h1>
-						<p className='text-2xl font-semibold text-justify'>
+			<div flex gap-30 mt15 w-full>
+				<div w='3/5' mt5>
+					<div text-left>
+						<h1 text='4xl' font='serif'>
+							ReactBurger
+						</h1>
+						<p text='lg justify' font='semibold'>
 							Welcome to ReactBurger, where innovation meets flavor! Step into our cozy eatery and embark on a culinary
 							journey like no other. From our classic burgers to our most creative concoctions, we are dedicated to
 							tantalizing your taste buds with fresh ingredients and irresistible flavors.
 						</p>
 					</div>
 
-					<div className='flex gap-5'>
-						<button className='text-xl p-4 w-50 mt-10 bg-gradient-to-r from-yellow-500 to-yellow-600 border-none rounded-3xl transition-all duration-300 hover:(from-yellow-400 to-yellow-700) cursor-pointer'>
+					<div flex gap5 mt10>
+						<button className='text-lg p-3 w-40  bg-gradient-to-r from-yellow-500 to-yellow-600 border-none rounded-3xl transition-all duration-300 hover:(from-yellow-400 to-yellow-700) cursor-pointer'>
 							Order now
 						</button>
 						<button
 							onClick={goToMenu}
-							className='bg-transparent w-40 rounded-3xl text-xl border-none mt-10 text-yellow-400 hover:bg-stone-300/10 transition duration-300 ease-in-out cursor-pointer'
+							className='bg-transparent w-40 rounded-3xl text-lg border-none text-yellow-400 hover:bg-stone-300/10 transition duration-300 ease-in-out cursor-pointer'
 						>
 							View Menu
 						</button>
 					</div>
 
-					<div className='mt-40'>
-						<div className='flex gap-8'>
-							<img src='/OIG4.jpeg' alt='' className={classNameCard} />
-							<img src='/imageRigth.jpeg' alt='' className={classNameCard} />
-							<img src='/OIG2.er_9CnJYu8lLnV.jpeg' alt='' className={classNameCard} />
-							<img src='/OIG3.jpeg' alt='' className={classNameCard} />
-							<img src='/OIG2.jpeg' alt='' className={classNameCard} />
+					<div mt20>
+						<div flex justify='between'>
+							{images.map((item) => (
+								<img
+									key={0}
+									src={item.image}
+									className='h-40 w-40 rounded-2xl border border-solid border-1 border-white:20 hover:border-yellow-500 transition duration-300 ease-in-out'
+								/>
+							))}
 						</div>
 					</div>
 				</div>
-				<div className='flex justify-end'>
-					<img src='/Untitled-1.jpg' alt='' className='h-200 w-190 object-contain' />
+				<div className='w-1/3 invisible lg:visible flex justify-end'>
+					<img src='/Untitled-1.jpg' alt='' className='h-full w-full object-contain' />
 				</div>
 			</div>
 		</>
