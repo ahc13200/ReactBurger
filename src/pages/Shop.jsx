@@ -12,7 +12,7 @@ export default function Shop() {
 
 	return (
 		<div>
-			<div className='mt-15 grid grid-cols-1 md:grid-cols-2'>
+			<div className='grid grid-cols-1 md:grid-cols-2'>
 				<div className='hidden md:block'>
 					<h2 className='text-3xl font-semibold'>{selectedItem}</h2>
 				</div>

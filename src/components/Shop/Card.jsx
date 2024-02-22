@@ -12,7 +12,10 @@ export default function Card({name, price, image, isMenu}) {
 			</div>
 			{isMenu && (
 				<div className='flex justify-end'>
-					<span className='absolute bg-yellow-400/80 top-38 text-xl w-20 mx-3 my-5 text-center rounded-3xl w-25 font-bold cursor-pointer hover:bg-yellow-400/90'>
+					<span
+						lt-xl='top-30'
+						className='absolute bg-yellow-400/80 top-58  text-lg w-17 mx-3 my-5 text-center rounded-3xl w-25 font-bold cursor-pointer hover:bg-yellow-400/90'
+					>
 						Details
 					</span>
 				</div>

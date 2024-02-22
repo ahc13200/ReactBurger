@@ -16,8 +16,8 @@ export default function Home() {
 	];
 	return (
 		<>
-			<div flex gap-30 mt15 w-full>
-				<div w='3/5' mt5>
+			<div flex gap-30 w-full>
+				<div w='3/5'>
 					<div text-left>
 						<h1 text='4xl' font='serif'>
 							ReactBurger

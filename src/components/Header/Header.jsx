@@ -21,7 +21,7 @@ export default function Header() {
 	return (
 		<>
 			<ModalCart ref={modal} name='amanda' />
-			<header className='fixed z-999 backdrop-blur-lg w-full h-20 flex items-center pb-1 pt-5'>
+			<header className='lt-xl-hidden fixed top-0 z-999 backdrop-blur-lg w-full h-20 flex items-center pb-1'>
 				<nav className='wfull'>
 					<div className='justify-between px-20 flex'>
 						<img
@@ -41,7 +41,7 @@ export default function Header() {
 								);
 							})}
 						</ul>
-						<ul className='flex wrap list-none text-2xl justify-end'>
+						<ul className='flex wrap list-none text-2xl justify-end gap-3'>
 							<ItemHeader>
 								<Icon icon='iconamoon:profile-fill' />
 							</ItemHeader>

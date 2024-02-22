@@ -1,12 +1,17 @@
 import {Outlet} from 'react-router-dom';
 
 import Header from '../components/Header/Header';
+import Bar from '../components/Mobile/Bar';
 
 function RootLayout() {
 	return (
 		<>
-			<Header />
-			<main px10 md:px15 lg:px20 pt20 pb10>
+			<div lt-xl='px-5'>
+				<Header />
+				<Bar />
+			</div>
+
+			<main p='x20 t30 b10' lt-xl='px-5 pt8 pb20'>
 				<Outlet />
 			</main>
 		</>

@@ -33,9 +33,9 @@ const router = createBrowserRouter([
 
 function App() {
 	return (
-		<main className='lg:min-w-screen-xl'>
+		<div h-full w-full>
 			<RouterProvider router={router} />
-		</main>
+		</div>
 	);
 }
 

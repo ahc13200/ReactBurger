@@ -5,7 +5,7 @@ export default function About() {
 		'border-transparent text-lg p3 rounded-2xl bg-stone-300/10 hover:bg-stone-300/20 cursor-pointer transition-all duration-300';
 	return (
 		<div>
-			<div flex gap-30 mt15 w-full>
+			<div flex gap-30 w-full>
 				<div w='3/5' text-xl>
 					<h1>About us</h1>
 					<p>
