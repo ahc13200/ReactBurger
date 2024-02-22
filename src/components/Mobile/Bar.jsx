@@ -12,9 +12,9 @@ export default function Bar() {
 	];
 
 	return (
-		<div className='fixed xl:hidden bottom-1 left-0 wfull h-16 z-300'>
+		<div className='fixed xl:hidden bottom-7 left-0 wfull h-16 z-300'>
 			<div className='backdrop-blur-2xl rounded-full of-hidden p2 bg-white:10'>
-				<div flex='~ row' justify='around' hfull>
+				<div className='flex justify-around hfull'>
 					{bar.map((item) => {
 						return (
 							<NavLink
