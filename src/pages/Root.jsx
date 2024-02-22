@@ -11,7 +11,7 @@ function RootLayout() {
 				<Bar />
 			</div>
 
-			<main p='x20 t30 b10' lt-xl='px-5 pt8 pb20'>
+			<main p='x20 t30 b10' lt-xl='px-3 pt8 pb20'>
 				<Outlet />
 			</main>
 		</>
