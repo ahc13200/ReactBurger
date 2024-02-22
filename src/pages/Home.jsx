@@ -40,7 +40,7 @@ export default function Home() {
 						</button>
 					</div>
 
-					<div mt20 wfull>
+					<div lt-md:mt20 mt35 wfull>
 						<div flex justify='between'>
 							{images.map((item) => (
 								<img
