@@ -3,11 +3,11 @@ import {Icon} from '@iconify/react';
 export default function Card({name, price, image, isMenu}) {
 	return (
 		<div className=' rounded-3xl p3 bg-white:10 group'>
-			<div className='min-h-30 overflow-hidden rounded-3xl '>
+			<div className='min-h-60 overflow-hidden rounded-3xl '>
 				<img
 					src={image}
 					alt=''
-					className='w-full hfull transform scale-105 group-hover:scale-110 transition-all duration-300'
+					className='wfull hfull transform scale-105 group-hover:scale-110 transition-all duration-300'
 				/>
 			</div>
 			{isMenu && (
