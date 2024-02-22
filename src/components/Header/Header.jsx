@@ -34,7 +34,9 @@ export default function Header() {
 									<NavLink
 										key={item.id}
 										to={item.rute}
-										className={({isActive}) => 'no-underline ' + (isActive ? 'text-yellow-400' : '')}
+										className={({isActive}) =>
+											'no-underline ' + (isActive ? 'text-yellow-400 bg-stone-300/20 rounded-xl flex items-center' : '')
+										}
 									>
 										<ItemHeader>{item.name}</ItemHeader>
 									</NavLink>

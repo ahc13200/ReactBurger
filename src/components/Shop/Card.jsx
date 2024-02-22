@@ -3,7 +3,7 @@ import {Icon} from '@iconify/react';
 export default function Card({name, price, image, isMenu}) {
 	return (
 		<div className=' rounded-3xl p3 bg-white:10 group'>
-			<div className='overflow-hidden rounded-3xl '>
+			<div className='min-h-30 overflow-hidden rounded-3xl '>
 				<img
 					src={image}
 					alt=''
