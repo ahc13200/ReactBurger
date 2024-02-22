@@ -13,7 +13,7 @@ export default function Card({name, price, image, isMenu}) {
 			{isMenu && (
 				<div className='flex justify-end'>
 					<span
-						lt-xl='top-30'
+						lt-xl='top-43'
 						className='absolute bg-yellow-400/80 top-58  text-lg w-17 mx-3 my-5 text-center rounded-3xl w-25 font-bold cursor-pointer hover:bg-yellow-400/90'
 					>
 						Details
