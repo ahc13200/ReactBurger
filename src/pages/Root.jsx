@@ -7,13 +7,13 @@ import Nav from '../components/Mobile/Nav';
 function RootLayout() {
 	return (
 		<>
-			<div lt-xl='px-5'>
+			<div>
 				<Header />
 				<Nav />
 				<Bar />
 			</div>
 
-			<main p='x20 t30 b10' lt-xl='px-3 pt8 pb25'>
+			<main p='x20 t30 b10' lt-xl='px-3 pt20 pb25'>
 				<Outlet />
 			</main>
 		</>
