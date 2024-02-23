@@ -43,7 +43,7 @@ export default function About() {
 					</div>
 				</div>
 				<div lt-xl='hidden' className='w-1/3 flex justify-end'>
-					<img src='/Untitled-1.jpg' alt='' className='h-full w-full object-contain' />
+					<img src='/hambur.png' alt='' className='h-150 w-full object-contain' />
 				</div>
 			</div>
 		</div>

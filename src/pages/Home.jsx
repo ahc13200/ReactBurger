@@ -16,7 +16,7 @@ export default function Home() {
 	];
 	return (
 		<>
-			<div flex gap-30 w-full>
+			<div flex gap-20 w-full>
 				<div lt-xl='wfull' w='3/5'>
 					<div text-left>
 						<h1 text='4xl' font='serif'>
@@ -54,7 +54,7 @@ export default function Home() {
 					</div>
 				</div>
 				<div className='w-1/3 invisible lg:visible flex justify-end'>
-					<img src='/Untitled-1.jpg' alt='' className='h-full w-full object-contain' />
+					<img src='/hambur.png' alt='' className='h-150 w-full object-contain' />
 				</div>
 			</div>
 		</>

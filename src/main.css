@@ -1,9 +1,5 @@
 html, body {
 	font-family: 'Quicksand';
-	/* height: 100vh;
-	margin: 0;
-	font-size: 14px;
-	padding: 0; */
 	color: white;
 	color-scheme: dark;
 	@apply bg-black;
