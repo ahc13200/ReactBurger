@@ -2,7 +2,7 @@ import {Icon} from '@iconify/react';
 
 export default function CardItem({name, price}) {
 	return (
-		<div className='bg-white:10 rounded-2xl p4 flex justify-between items-center'>
+		<div className='bg-white:10 max-h-8 rounded-2xl p4 flex justify-between items-center'>
 			<div className='flex gap4'>
 				<span>{name}</span>
 				<span>2 x ${price}</span>
