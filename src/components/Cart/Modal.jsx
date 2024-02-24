@@ -47,7 +47,7 @@ const ModalCart = forwardRef(function Modal({id}, ref) {
 			</div>
 
 			<div className='mt-auto flex items-center justify-between'>
-				<span className='text-2xl'>Total: $600</span>
+				<span className='text-xl'>Total: $600</span>
 				<div className='flex gap3'>
 					<button
 						onClick={closeModal}

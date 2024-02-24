@@ -12,7 +12,7 @@ export default function Shop() {
 
 	return (
 		<div>
-			<div className='grid grid-cols-1 md:grid-cols-2'>
+			<div className='grid grid-cols-1 md:grid-cols-2 mt7'>
 				<div className='hidden md:block'>
 					<h2 className='text-3xl font-semibold'>{selectedItem}</h2>
 				</div>
@@ -36,7 +36,7 @@ export default function Shop() {
 					</div>
 				</div>
 			</div>
-			<div className='mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10'>
+			<div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10'>
 				<TabContent selectedTopic={selectedItem} />
 			</div>
 		</div>

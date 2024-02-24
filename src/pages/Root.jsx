@@ -13,7 +13,7 @@ function RootLayout() {
 				<Bar />
 			</div>
 
-			<main p='x20 t30 b10' lt-xl='px-3 pt20 pb25' className='transition-all duration-300'>
+			<main p='x20 t30 b10' lt-xl='px-3 pt15 pb25' className='transition-all duration-300'>
 				<Outlet />
 			</main>
 		</>
