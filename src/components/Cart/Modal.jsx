@@ -22,7 +22,7 @@ const ModalCart = forwardRef(function Modal({id}, ref) {
 		<dialog
 			ref={dialog}
 			id={id}
-			lt-md='h2/3 w2/3 my-30 p6 pt0'
+			lt-md='h2/3 wfull my-30 p3 pt3 pb4'
 			p='t4 b4 5'
 			className='modal outline-none rounded-3xl border border-solid border-1 border-white:20 h-1/2 w-1/3'
 		>
