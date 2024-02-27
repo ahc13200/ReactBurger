@@ -21,7 +21,7 @@ export default function Card({name, price, image, isMenu}) {
 				</div>
 			)}
 			<h2 className='text-center text-2xl mb-0'>{name}</h2>
-			<div className='mx-5 grid grid-flow-col grid-cols-2'>
+			<div className='mx1 grid grid-flow-col grid-cols-2'>
 				<h1 text-xl>$ {price}</h1>
 				<div className='my-auto flex justify-end'>
 					<button className='flex justify-center items-center h-10 w-25 text-3xl bg-gradient-to-r from-yellow-500 to-yellow-600 border-none rounded-3xl hover:scale-110 transition duration-300 ease-in-out cursor-pointer'>
