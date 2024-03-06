@@ -1,10 +1,12 @@
 import {Icon} from '@iconify/react';
-import {useImperativeHandle, useRef, forwardRef} from 'react';
+import {useImperativeHandle, useRef, forwardRef, useState} from 'react';
 import {createPortal} from 'react-dom';
-import CardItem from './CardItem';
+import Cart from './Cart';
+import UserData from './UserData';
 
 const ModalCart = forwardRef(function Modal({id}, ref) {
 	const dialog = useRef();
+	const [contentModal, setContentModal] = useState(<Cart checkout={goToCheckout} />);
 
 	useImperativeHandle(ref, () => {
 		return {
@@ -14,8 +16,17 @@ const ModalCart = forwardRef(function Modal({id}, ref) {
 		};
 	});
 
+	function goToCheckout() {
+		setContentModal(<UserData back={back} />);
+	}
+
 	function closeModal() {
 		dialog.current.close();
+		setContentModal(<Cart checkout={goToCheckout} />);
+	}
+
+	function back() {
+		setContentModal(<Cart checkout={goToCheckout} />);
 	}
 
 	return createPortal(
@@ -41,27 +52,7 @@ const ModalCart = forwardRef(function Modal({id}, ref) {
 					</div>
 				</header>
 
-				<div className='mt5 grid gap2 mb5'>
-					<CardItem name='Burger Mixt' price={300} />
-					<CardItem name='Jamon Burger' price={400} />
-					<CardItem name='Fanta' price={200} />
-				</div>
-
-				<div className='mt-auto flex items-center justify-between'>
-					<span className='text-xl'>Total: $600</span>
-					<div className='flex gap3'>
-						<button
-							onClick={closeModal}
-							lt-md='hidden'
-							className='bg-transparent border-none text-lg hover:bg-white:10 p1 rounded-3xl transition-all duration-300 text-yellow-400 w-30 cursor-pointer'
-						>
-							Close
-						</button>
-						<button className='border-none bg-gradient-to-r from-yellow-500 to-yellow-600 text-lg rounded-3xl w30 cursor-pointer hover:(from-yellow-400 to-yellow-700) transition-all duration-300'>
-							Checkout
-						</button>
-					</div>
-				</div>
+				{contentModal}
 			</div>
 		</dialog>,
 		document.getElementById('modal')
