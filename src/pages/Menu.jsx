@@ -2,8 +2,6 @@ import {useEffect, useState} from 'react';
 import Card from '../components/Shop/Card';
 import {listFetch} from '../composables/useListFetch';
 
-const baseURL = 'http://localhost:3000/';
-
 export default function Menu() {
 	const [products, setProducts] = useState(null);
 
@@ -25,7 +23,7 @@ export default function Menu() {
 				{products.map((item) => {
 					return (
 						<div key={item.id}>
-							<Card isMenu name={item.name} price={item.price} image={baseURL + item.image} />
+							<Card isMenu product={item} />
 						</div>
 					);
 				})}

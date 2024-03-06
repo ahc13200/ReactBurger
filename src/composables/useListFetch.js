@@ -9,3 +9,9 @@ export async function listFetch(endpoint) {
 
 	return result;
 }
+
+export async function create(endpoint, data) {
+	const response = await axios.post(`${baseURL}` + endpoint, data);
+
+	return response.status;
+}
