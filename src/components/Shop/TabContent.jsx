@@ -1,6 +1,6 @@
 import Card from './Card';
 import {useEffect, useState} from 'react';
-import {listFetch} from '../../composables/useListFetch';
+import {listFetch} from '../../hooks/useListFetch';
 
 export default function TabContent({selectedTopic}) {
 	const [products, setProducts] = useState(null);

@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import Card from '../components/Shop/Card';
-import {listFetch} from '../composables/useListFetch';
+import {listFetch} from '../hooks/useListFetch';
 
 export default function Menu() {
 	const [products, setProducts] = useState(null);

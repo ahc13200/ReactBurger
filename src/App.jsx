@@ -5,6 +5,7 @@ import Menu from './pages/Menu';
 import RootLayout from './pages/Root';
 import About from './pages/About';
 import Shop from './pages/Shop';
+import {CartProvider} from './store/useCartStore.jsx';
 
 const router = createBrowserRouter([
 	{
@@ -33,9 +34,11 @@ const router = createBrowserRouter([
 
 function App() {
 	return (
-		<div h-full w-full>
-			<RouterProvider router={router} />
-		</div>
+		<CartProvider>
+			<div h-full w-full>
+				<RouterProvider router={router} />
+			</div>
+		</CartProvider>
 	);
 }
 
