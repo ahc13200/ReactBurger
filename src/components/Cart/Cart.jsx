@@ -1,16 +1,14 @@
-import { useContext } from 'react';
+import {useContext} from 'react';
 import CartItem from './CartItem';
-import { CartContext } from '../../store/useCartStore';
+import {CartContext} from '../../store/useCartStore';
 
-
-export default function Cart({ checkout }) {
-	const { state } = useContext(CartContext);
-	const productsList = state.cart_products	
+export default function Cart({checkout}) {
+	const {state} = useContext(CartContext);
+	const productsList = state.cart_products;
 
 	if (productsList.length === 0)
 		return (
 			<div className='flex justify-center hfull'>
-				cartContext: {JSON.stringify(state)}
 				<h2 className='flex items-center'>No hay productos en su carro!!</h2>
 			</div>
 		);
@@ -19,11 +17,11 @@ export default function Cart({ checkout }) {
 		<>
 			<div className='mt6 grid gap2 mb5'>
 				{productsList.map((item) => {
-					return ( item.product?.id?
+					return item.product?.id ? (
 						<div key={item.product?.id}>
 							<CartItem product={item.product} quantity={item.quantity} />
 						</div>
-						:
+					) : (
 						<div></div>
 					);
 				})}

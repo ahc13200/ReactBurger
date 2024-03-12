@@ -8,11 +8,11 @@ export default function Home() {
 	}
 
 	const images = [
-		{image: '/OIG4.jpeg'},
-		{image: '/imageRigth.jpeg'},
-		{image: '/OIG2.er_9CnJYu8lLnV.jpeg'},
-		{image: '/OIG3.jpeg'},
-		{image: '/OIG2.jpeg'},
+		{image: 'menu/OIG4.jpeg'},
+		{image: 'menu/imageRigth.jpeg'},
+		{image: 'menu/OIG2.er_9CnJYu8lLnV.jpeg'},
+		{image: 'menu/OIG3.jpeg'},
+		{image: 'menu/OIG2.jpeg'},
 	];
 	return (
 		<>
