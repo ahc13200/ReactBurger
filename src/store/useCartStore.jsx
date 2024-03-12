@@ -4,7 +4,7 @@ import {storageReducer} from './global';
 export const CartContext = createContext();
 
 export function CartProvider({children}) {
-	const [state, dispatch] = useReducer(storageReducer, {cart_products: []});
+	const [state, dispatch] = useReducer(storageReducer, {cart_products: [], total: 0});
 	const [loadedStorage, setLoadedStorage] = useState(false);
 
 	const addToCart = (product) => {
@@ -21,9 +21,26 @@ export function CartProvider({children}) {
 		alert(`Product ${product.name} was added to cart`);
 	};
 
+	const products = [...state.cart_products];
+	state.total = products.reduce((val, val1) => val + val1.product.price * val1.quantity, 0);
+
+	const incrementQuantity = (product) => {
+		const products = [...state.cart_products];
+		const productIndex = products.findIndex((p) => p.product.id === product.id);
+		products[productIndex].quantity++;
+		dispatch({key: 'cart_products', value: [...products]});
+	};
+
+	const decrementQuantity = (product) => {
+		const products = [...state.cart_products];
+		const productIndex = products.findIndex((p) => p.product.id === product.id);
+		products[productIndex].quantity--;
+		if (products[productIndex].quantity === 0) products.splice(productIndex);
+		dispatch({key: 'cart_products', value: [...products]});
+	};
+
 	useEffect(() => {
 		let cart_store = JSON.parse(localStorage.getItem('cart_store'));
-		console.log(cart_store, 'cart_store');
 		for (const key in cart_store) {
 			dispatch({key, value: cart_store[key]});
 		}
@@ -36,5 +53,9 @@ export function CartProvider({children}) {
 		}
 	}, [state, loadedStorage]);
 
-	return <CartContext.Provider value={{state, dispatch, addToCart}}>{children}</CartContext.Provider>;
+	return (
+		<CartContext.Provider value={{state, dispatch, addToCart, incrementQuantity, decrementQuantity}}>
+			{children}
+		</CartContext.Provider>
+	);
 }

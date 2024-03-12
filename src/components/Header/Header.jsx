@@ -24,10 +24,7 @@ export default function Header() {
 			<header className='lt-xl-hidden fixed top-0 z-999 backdrop-blur-lg w-full h-20 flex items-center pb-1'>
 				<nav className='wfull'>
 					<div className='justify-between px-20 flex'>
-						<img
-							src='/logo.png'
-							className='mt-4 h-15 w-15 object-contain hover:scale-125 transition duration-300 ease-in-out'
-						/>
+						<img src='/logo.png' className='mt-4 h-15 w-15 object-contain' />
 						<ul className='flex wrap list-none gap-5 text-xl font-semibold'>
 							{header.map((item) => {
 								return (
