@@ -3,6 +3,7 @@ import {useImperativeHandle, useRef, forwardRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 import Cart from './Cart';
 import UserData from './UserData';
+import {Toaster} from 'react-hot-toast';
 
 const ModalCart = forwardRef(function Modal({id}, ref) {
 	const dialog = useRef();
@@ -37,6 +38,9 @@ const ModalCart = forwardRef(function Modal({id}, ref) {
 			p='t4 b4 5'
 			className='modal outline-none rounded-3xl border border-solid border-1 border-white:20 h-1/2 w-1/3'
 		>
+			<div>
+				<Toaster position='top-center' reverseOrder={false} />
+			</div>
 			<div className='flex flex-col hfull'>
 				<header>
 					<div className='flex justify-between items-center'>
