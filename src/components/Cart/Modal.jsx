@@ -17,7 +17,7 @@ const ModalCart = forwardRef(function Modal({id}, ref) {
 	});
 
 	function goToCheckout() {
-		setContentModal(<UserData back={back} />);
+		setContentModal(<UserData back={back} close={closeModal} />);
 	}
 
 	function closeModal() {

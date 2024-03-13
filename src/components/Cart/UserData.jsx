@@ -3,7 +3,7 @@ import Input from './InputsUser';
 import {CartContext} from '../../store/useCartStore';
 import {createFetch} from '../../hooks/useListFetch';
 
-export default function UserData({back}) {
+export default function UserData({back, close}) {
 	const {state, deleteStorage} = useContext(CartContext);
 	const productsList = state.cart_products;
 	const name = useRef();
@@ -37,6 +37,9 @@ export default function UserData({back}) {
 		});
 		setSendRequest(true);
 		deleteStorage();
+		setTimeout(() => {
+			close();
+		}, 1000);
 	}
 
 	return (
