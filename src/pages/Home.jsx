@@ -1,10 +1,18 @@
 import {useNavigate} from 'react-router-dom';
+import ModalCart from '../components/Cart/Modal';
+import {useRef} from 'react';
 
 export default function Home() {
 	const navigate = useNavigate();
 
 	function goToMenu() {
 		navigate('/menu');
+	}
+
+	const modal = useRef();
+
+	function handleOpenCart() {
+		modal.current.open();
 	}
 
 	const images = [
@@ -16,6 +24,7 @@ export default function Home() {
 	];
 	return (
 		<>
+			<ModalCart ref={modal} id='cart' />
 			<div flex gap-20 w-full>
 				<div lt-xl='wfull' w='3/5'>
 					<div text-left>
@@ -30,6 +39,7 @@ export default function Home() {
 
 					<div flex gap5 mt10>
 						<button
+							onClick={handleOpenCart}
 							lt-md='p2 text-[1rem] w35'
 							className='text-lg p-3 w-40  bg-gradient-to-r from-yellow-500 to-yellow-600 border-none rounded-3xl transition-all duration-300 hover:(from-yellow-400 to-yellow-700) cursor-pointer'
 						>

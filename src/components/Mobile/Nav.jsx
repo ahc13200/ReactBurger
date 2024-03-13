@@ -19,9 +19,6 @@ export default function Nav() {
 				</div>
 				<ul className='flex wrap list-none text-xl gap2 justify-end pr10'>
 					<ItemHeader isMobile>
-						<Icon icon='iconamoon:profile-fill' />
-					</ItemHeader>
-					<ItemHeader isMobile>
 						<Icon onClick={handleOpenCart} icon='eva:shopping-cart-fill' />
 					</ItemHeader>
 				</ul>

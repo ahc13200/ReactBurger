@@ -42,9 +42,6 @@ export default function Header() {
 						</ul>
 						<ul className='flex wrap list-none text-2xl justify-end gap-3'>
 							<ItemHeader>
-								<Icon icon='iconamoon:profile-fill' />
-							</ItemHeader>
-							<ItemHeader>
 								<Icon onClick={handleOpenCart} icon='eva:shopping-cart-fill' />
 							</ItemHeader>
 						</ul>

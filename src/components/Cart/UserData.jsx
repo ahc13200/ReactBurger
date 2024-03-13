@@ -59,7 +59,9 @@ export default function UserData({back, close}) {
 				</div>
 			</div>
 			<div className='mt-auto flex items-center justify-between'>
-				<span className='text-xl'>Total: ${state.total}</span>
+				<span lt-md='text-[1.1rem]' className='text-xl'>
+					Total: ${state.total}
+				</span>
 				<div className='flex gap3'>
 					<button
 						onClick={back}
