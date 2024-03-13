@@ -2,12 +2,22 @@ import {Icon} from '@iconify/react';
 
 export default function About() {
 	const contacts = [
-		{id: 0, icon: <Icon icon='logos:telegram' height={30} />, contact: 'amandaHdez'},
-		{id: 1, icon: <Icon icon='skill-icons:gmail-dark' height={30} />, contact: 'ahc13200@gmail.com'},
-		{id: 2, icon: <Icon icon='skill-icons:github-dark' height={30} />, contact: 'ahc13200'},
+		{id: 0, icon: <Icon icon='logos:telegram' height={30} />, contact: 'amandaHdez', link: 'https://t.me/amandaHdez'},
+		{
+			id: 1,
+			icon: <Icon icon='skill-icons:gmail-dark' height={30} />,
+			contact: 'ahc13200@gmail.com',
+			link: 'mailto:ahc13200@gmail.com',
+		},
+		{
+			id: 2,
+			icon: <Icon icon='skill-icons:github-dark' height={30} />,
+			contact: 'ReactBurger',
+			link: 'https://github.com/ahc13200/ReactBurger',
+		},
 	];
 	const classNameButton =
-		'border-transparent text-lg p3 rounded-2xl bg-stone-300/10 hover:bg-stone-300/20 cursor-pointer transition-all duration-300';
+		'no-underline text-white border-transparent text-lg p3 rounded-2xl bg-stone-300/10 hover:bg-stone-300/20 cursor-pointer transition-all duration-300';
 	return (
 		<div>
 			<div flex lt-xl='gap0' gap-30 w-full>
@@ -29,14 +39,14 @@ export default function About() {
 						<div className='grid grid-cols-3 gap-5'>
 							{contacts.map((item) => {
 								return (
-									<button key={item.id} className={classNameButton}>
+									<a href={item.link} key={item.id} className={classNameButton}>
 										<div className='flex gap-4 justify-center'>
 											{item.icon}
 											<p lt-md='hidden' className='mt-auto mb-0'>
 												{item.contact}
 											</p>
 										</div>
-									</button>
+									</a>
 								);
 							})}
 						</div>
