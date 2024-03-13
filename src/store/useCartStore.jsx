@@ -20,14 +20,7 @@ export function CartProvider({children}) {
 		}
 
 		toast.success(`${product.name} was added to cart`, {
-			style: {
-				borderRadius: '30px',
-				color: '#fff',
-				text: '50px',
-				padding: '12px',
-				backdropFilter: 'blur(5px)',
-				backgroundColor: '#333',
-			},
+			className: 'md:mt18 rounded-3xl z-300 bg-[#333] text-white p2',
 		});
 	};
 
@@ -45,7 +38,7 @@ export function CartProvider({children}) {
 		const products = [...state.cart_products];
 		const productIndex = products.findIndex((p) => p.product.id === product.id);
 		products[productIndex].quantity--;
-		if (products[productIndex].quantity === 0) products.splice(productIndex);
+		if (products[productIndex].quantity == 0) products.splice(productIndex, 1);
 		dispatch({key: 'cart_products', value: [...products]});
 	};
 

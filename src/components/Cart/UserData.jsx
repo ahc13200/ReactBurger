@@ -5,6 +5,8 @@ import {createFetch} from '../../hooks/useListFetch';
 import toast from 'react-hot-toast';
 
 export default function UserData({back, close}) {
+	const className = 'md:m20 rounded-3xl z-300 bg-[#333] text-white p2';
+
 	const {state, deleteStorage} = useContext(CartContext);
 	const productsList = state.cart_products;
 	const name = useRef();
@@ -19,14 +21,7 @@ export default function UserData({back, close}) {
 				const status = await createFetch('invoice', invoice);
 				if (status === 200) {
 					toast.success('Order created successfully!!', {
-						style: {
-							borderRadius: '30px',
-							color: '#fff',
-							text: '50px',
-							padding: '12px',
-							backdropFilter: 'blur(5px)',
-							backgroundColor: '#333',
-						},
+						className: className,
 						duration: 3000,
 					});
 				} else toast.error('An error occurred while creating the order!!');
@@ -37,20 +32,32 @@ export default function UserData({back, close}) {
 	}, [sendRequest, invoice]);
 
 	function handleSaveInvoice() {
-		setInvoice({
-			user: {
-				name: name.current.value,
-				email: email.current.value,
-				address: address.current.value,
-			},
-			order: productsList,
-			total: state.total,
-		});
-		setSendRequest(true);
-		deleteStorage();
-		setTimeout(() => {
-			close();
-		}, 800);
+		const enteredName = name.current.value;
+		const enteredEmail = email.current.value;
+		const enteredAddress = address.current.value;
+
+		if (enteredName.trim() === '' || enteredEmail.trim() === '')
+			toast.error('You should not leave any field empty.', {
+				duration: 4000,
+				className: className,
+			});
+		else {
+			setInvoice({
+				user: {
+					name: enteredName,
+					email: enteredEmail,
+					address: enteredAddress,
+				},
+				order: productsList,
+				total: state.total,
+			});
+
+			setSendRequest(true);
+			deleteStorage();
+			setTimeout(() => {
+				close();
+			}, 800);
+		}
 	}
 
 	return (
@@ -69,6 +76,7 @@ export default function UserData({back, close}) {
 					<Input label='Address' textarea ref={address} />
 				</div>
 			</div>
+
 			<div className='mt-auto flex items-center justify-between'>
 				<span lt-md='text-[1.1rem]' className='text-xl'>
 					Total: ${state.total}
