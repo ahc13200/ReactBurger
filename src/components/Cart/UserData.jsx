@@ -2,6 +2,7 @@ import {useContext, useEffect, useRef, useState} from 'react';
 import Input from './InputsUser';
 import {CartContext} from '../../store/useCartStore';
 import {createFetch} from '../../hooks/useListFetch';
+import toast from 'react-hot-toast';
 
 export default function UserData({back, close}) {
 	const {state, deleteStorage} = useContext(CartContext);
@@ -17,8 +18,18 @@ export default function UserData({back, close}) {
 			if (sendRequest) {
 				const status = await createFetch('invoice', invoice);
 				if (status === 200) {
-					alert('Invoice was send');
-				} else alert('Error');
+					toast.success('Order created successfully!!', {
+						style: {
+							borderRadius: '30px',
+							color: '#fff',
+							text: '50px',
+							padding: '12px',
+							backdropFilter: 'blur(5px)',
+							backgroundColor: '#333',
+						},
+						duration: 3000,
+					});
+				} else toast.error('An error occurred while creating the order!!');
 				setSendRequest(false);
 			}
 		}
@@ -39,7 +50,7 @@ export default function UserData({back, close}) {
 		deleteStorage();
 		setTimeout(() => {
 			close();
-		}, 1000);
+		}, 800);
 	}
 
 	return (

@@ -1,6 +1,6 @@
 import {createContext, useEffect, useReducer, useState} from 'react';
 import {storageReducer} from './global';
-// import Message from '../components/notifications/Message';
+import toast from 'react-hot-toast';
 
 export const CartContext = createContext();
 
@@ -19,9 +19,16 @@ export function CartProvider({children}) {
 			dispatch({key: 'cart_products', value: [...products]});
 		}
 
-		// <Message text={`Product ${product.name} was added to cart`} />;
-
-		alert(`Product ${product.name} was added to cart`);
+		toast.success(`${product.name} was added to cart`, {
+			style: {
+				borderRadius: '30px',
+				color: '#fff',
+				text: '50px',
+				padding: '12px',
+				backdropFilter: 'blur(5px)',
+				backgroundColor: '#333',
+			},
+		});
 	};
 
 	const products = [...state.cart_products];
