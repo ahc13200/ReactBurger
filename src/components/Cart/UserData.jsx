@@ -9,15 +9,7 @@ export default function UserData({back}) {
 	const name = useRef();
 	const email = useRef();
 	const address = useRef();
-	const [invoice, setInvoice] = useState({
-		user: {
-			name: ' ',
-			email: ' ',
-			address: ' ',
-		},
-		order: [],
-		total: 0,
-	});
+	const [invoice, setInvoice] = useState(null);
 	const [sendRequest, setSendRequest] = useState(false);
 
 	useEffect(() => {

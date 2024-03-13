@@ -9,13 +9,15 @@ export default function Cart({checkout}) {
 	if (productsList.length === 0)
 		return (
 			<div className='flex justify-center hfull'>
-				<h2 className='flex items-center'>There are no products in your cart!!</h2>
+				<h2 lt-md='text-xl' className='flex items-center'>
+					There are no products in your cart!!
+				</h2>
 			</div>
 		);
 
 	return (
 		<>
-			<div className='mt6 grid gap2 mb5'>
+			<div className='scrollbox mt6 grid gap2 mb5'>
 				{productsList.map((item) => {
 					return (
 						<div key={item.product?.id}>

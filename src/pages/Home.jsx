@@ -8,11 +8,11 @@ export default function Home() {
 	}
 
 	const images = [
-		{image: 'menu/OIG4.jpeg'},
-		{image: 'menu/imageRigth.jpeg'},
-		{image: 'menu/OIG2.er_9CnJYu8lLnV.jpeg'},
-		{image: 'menu/OIG3.jpeg'},
-		{image: 'menu/OIG2.jpeg'},
+		{id: 0, image: 'menu/OIG4.jpeg'},
+		{id: 1, image: 'menu/imageRigth.jpeg'},
+		{id: 2, image: 'menu/OIG2.er_9CnJYu8lLnV.jpeg'},
+		{id: 3, image: 'menu/OIG3.jpeg'},
+		{id: 4, image: 'menu/OIG2.jpeg'},
 	];
 	return (
 		<>
@@ -48,7 +48,7 @@ export default function Home() {
 						<div flex justify='between'>
 							{images.map((item) => (
 								<img
-									key={0}
+									key={item.id}
 									src={item.image}
 									lt-xl='h17 w17'
 									className='h-40 w-40 rounded-2xl border border-solid border-1 border-white:20 hover:border-yellow-500 transition duration-300 ease-in-out'

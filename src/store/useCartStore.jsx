@@ -1,5 +1,6 @@
 import {createContext, useEffect, useReducer, useState} from 'react';
 import {storageReducer} from './global';
+// import Message from '../components/notifications/Message';
 
 export const CartContext = createContext();
 
@@ -17,6 +18,8 @@ export function CartProvider({children}) {
 			products[productIndex].quantity++;
 			dispatch({key: 'cart_products', value: [...products]});
 		}
+
+		// <Message text={`Product ${product.name} was added to cart`} />;
 
 		alert(`Product ${product.name} was added to cart`);
 	};
