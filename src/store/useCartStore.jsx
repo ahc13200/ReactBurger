@@ -42,6 +42,11 @@ export function CartProvider({children}) {
 		dispatch({key: 'cart_products', value: [...products]});
 	};
 
+	const deleteStorage = () => {
+		const products = [...state.cart_products];
+		products.length = 0;
+		dispatch({key: 'cart_products', value: [...products]});
+	};
 	useEffect(() => {
 		let cart_store = JSON.parse(localStorage.getItem('cart_store'));
 		for (const key in cart_store) {
@@ -57,7 +62,7 @@ export function CartProvider({children}) {
 	}, [state, loadedStorage]);
 
 	return (
-		<CartContext.Provider value={{state, dispatch, addToCart, incrementQuantity, decrementQuantity}}>
+		<CartContext.Provider value={{state, dispatch, addToCart, incrementQuantity, decrementQuantity, deleteStorage}}>
 			{children}
 		</CartContext.Provider>
 	);

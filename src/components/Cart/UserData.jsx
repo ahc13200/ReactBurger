@@ -4,7 +4,7 @@ import {CartContext} from '../../store/useCartStore';
 import {createFetch} from '../../hooks/useListFetch';
 
 export default function UserData({back}) {
-	const {state} = useContext(CartContext);
+	const {state, deleteStorage} = useContext(CartContext);
 	const productsList = state.cart_products;
 	const name = useRef();
 	const email = useRef();
@@ -16,8 +16,9 @@ export default function UserData({back}) {
 		async function createInvice() {
 			if (sendRequest) {
 				const status = await createFetch('invoice', invoice);
-				if (status === 200) alert('Invoice was send');
-				else alert('Error');
+				if (status === 200) {
+					alert('Invoice was send');
+				} else alert('Error');
 				setSendRequest(false);
 			}
 		}
@@ -35,6 +36,7 @@ export default function UserData({back}) {
 			total: state.total,
 		});
 		setSendRequest(true);
+		deleteStorage();
 	}
 
 	return (
