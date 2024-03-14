@@ -19,7 +19,7 @@ export function CartProvider({children}) {
 			dispatch({key: 'cart_products', value: [...products]});
 		}
 
-		toast.success(`${product.name} was added to cart`, {
+		toast.success(`${product.name} added to cart`, {
 			className: 'md:mt18 rounded-3xl z-300 bg-[#333] text-white p2',
 		});
 	};
@@ -38,7 +38,12 @@ export function CartProvider({children}) {
 		const products = [...state.cart_products];
 		const productIndex = products.findIndex((p) => p.product.id === product.id);
 		products[productIndex].quantity--;
-		if (products[productIndex].quantity == 0) products.splice(productIndex, 1);
+		if (products[productIndex].quantity == 0) {
+			products.splice(productIndex, 1);
+			toast.success(`${product.name} removed from cart`, {
+				className: 'md:mt18 rounded-3xl z-300 bg-[#333] text-white p2',
+			});
+		}
 		dispatch({key: 'cart_products', value: [...products]});
 	};
 
