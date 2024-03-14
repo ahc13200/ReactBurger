@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 
 export default function UserData({back, close}) {
 	const className = 'md:m20 rounded-3xl z-300 bg-[#333] text-white p2';
+	const style = {borderRadius: '30px', background: '#333', color: '#fff'};
 
 	const {state, deleteStorage} = useContext(CartContext);
 	const productsList = state.cart_products;
@@ -21,10 +22,16 @@ export default function UserData({back, close}) {
 				const status = await createFetch('invoice', invoice);
 				if (status === 200) {
 					toast.success('Order created successfully!!', {
+						style: style,
 						className: className,
 						duration: 3000,
 					});
-				} else toast.error('An error occurred while creating the order!!');
+				} else
+					toast.error('An error occurred while creating the order!!', {
+						duration: 4000,
+						className: className,
+						style: style,
+					});
 				setSendRequest(false);
 			}
 		}
@@ -38,8 +45,9 @@ export default function UserData({back, close}) {
 
 		if (enteredName.trim() === '' || enteredEmail.trim() === '')
 			toast.error('You should not leave any field empty.', {
-				duration: 4000,
+				duration: 3000,
 				className: className,
+				style: style,
 			});
 		else {
 			setInvoice({
@@ -56,7 +64,7 @@ export default function UserData({back, close}) {
 			deleteStorage();
 			setTimeout(() => {
 				close();
-			}, 800);
+			}, 900);
 		}
 	}
 

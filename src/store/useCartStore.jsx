@@ -46,7 +46,12 @@ export function CartProvider({children}) {
 		if (products[productIndex].quantity == 0) {
 			products.splice(productIndex, 1);
 			toast.success(`${product.name} removed from cart`, {
-				className: 'md:mt18 rounded-3xl z-300 bg-[#333] text-white p2',
+				style: {
+					borderRadius: '30px',
+					background: '#333',
+					color: '#fff',
+				},
+				className: 'md:mt18',
 			});
 		}
 		dispatch({key: 'cart_products', value: [...products]});
