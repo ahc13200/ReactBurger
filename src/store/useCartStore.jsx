@@ -20,12 +20,12 @@ export function CartProvider({children}) {
 		}
 
 		toast.success(`${product.name} added to cart`, {
-			// style: {
-			// 	borderRadius: '10px',
-			// 	background: '#333',
-			// 	color: '#fff',
-			// },
-			className: 'md:mt18 rounded-3xl z-300 bg-[#333] text-white p2',
+			style: {
+				borderRadius: '30px',
+				background: '#333',
+				color: '#fff',
+			},
+			className: 'md:mt18',
 		});
 	};
 
