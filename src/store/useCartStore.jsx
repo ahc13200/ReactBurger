@@ -33,6 +33,8 @@ export function CartProvider({children}) {
 	const products = [...state.cart_products];
 	state.total = products.reduce((val, val1) => val + val1.product.price * val1.quantity, 0);
 
+	if (products.length === 0) state.countItem = 0;
+
 	const incrementQuantity = (product) => {
 		const products = [...state.cart_products];
 		const productIndex = products.findIndex((p) => p.product.id === product.id);
@@ -47,7 +49,6 @@ export function CartProvider({children}) {
 		state.countItem--;
 		if (products[productIndex].quantity == 0) {
 			products.splice(productIndex, 1);
-			state.countItem = 0;
 			toast.success(`${product.name} removed from cart`, {
 				style: {
 					borderRadius: '30px',
