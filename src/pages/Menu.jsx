@@ -23,7 +23,7 @@ export default function Menu() {
 				{products.map((item) => {
 					return (
 						<div key={item.id}>
-							<Card isMenu product={item} />
+							<Card product={item} />
 						</div>
 					);
 				})}

@@ -5,7 +5,7 @@ import {useContext} from 'react';
 // const baseURL = 'http://localhost:3000/';
 const baseURL = 'https://api.burguer.regiondev.org/';
 
-export default function Card({product, isMenu}) {
+export default function Card({product}) {
 	const {addToCart} = useContext(CartContext);
 
 	return (
@@ -17,7 +17,7 @@ export default function Card({product, isMenu}) {
 					className='wfull hfull transform scale-105 group-hover:scale-110 transition-all duration-300'
 				/>
 			</div>
-			{isMenu && (
+			{/* {isMenu && (
 				<div className='flex justify-end'>
 					<span
 						lt-xl='top-38'
@@ -26,7 +26,7 @@ export default function Card({product, isMenu}) {
 						Details
 					</span>
 				</div>
-			)}
+			)} */}
 			<h2 className='text-center text-2xl mb-0'>{product.name}</h2>
 			<div className='mx1 flex justify-between items-center'>
 				<h1 text-2xl>$ {product.price}</h1>
