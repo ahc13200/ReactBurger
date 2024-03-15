@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 export const CartContext = createContext();
 
 export function CartProvider({children}) {
-	const [state, dispatch] = useReducer(storageReducer, {cart_products: [], total: 0});
+	const [state, dispatch] = useReducer(storageReducer, {cart_products: [], total: 0, countItem: 0});
 	const [loadedStorage, setLoadedStorage] = useState(false);
 
 	const addToCart = (product) => {
@@ -14,6 +14,7 @@ export function CartProvider({children}) {
 		const productIndex = products.findIndex((p) => p.product.id === product.id);
 		if (productIndex === -1) {
 			dispatch({key: 'cart_products', value: [...products, {product, quantity: 1}]});
+			state.countItem++;
 		} else {
 			products[productIndex].quantity++;
 			dispatch({key: 'cart_products', value: [...products]});
@@ -43,8 +44,10 @@ export function CartProvider({children}) {
 		const products = [...state.cart_products];
 		const productIndex = products.findIndex((p) => p.product.id === product.id);
 		products[productIndex].quantity--;
+		state.countItem--;
 		if (products[productIndex].quantity == 0) {
 			products.splice(productIndex, 1);
+			state.countItem = 0;
 			toast.success(`${product.name} removed from cart`, {
 				style: {
 					borderRadius: '30px',

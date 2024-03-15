@@ -1,7 +1,8 @@
 import {Icon} from '@iconify/react';
 import ItemHeader from '../Header/ItemHeader';
-import {useRef} from 'react';
+import {useContext, useRef} from 'react';
 import ModalCart from '../Cart/Modal';
+import {CartContext} from '../../store/useCartStore';
 
 export default function Nav() {
 	const modal = useRef();
@@ -9,6 +10,8 @@ export default function Nav() {
 	function handleOpenCart() {
 		modal.current.open();
 	}
+	const {state} = useContext(CartContext);
+	const count = state.countItem;
 	return (
 		<>
 			<ModalCart ref={modal} id='cart' />
@@ -19,6 +22,9 @@ export default function Nav() {
 				</div>
 				<ul className='flex wrap list-none text-xl gap2 justify-end pr10'>
 					<ItemHeader isMobile>
+						<span className='font-semibold text-sm absolute top-2.5 right-15 bg-yellow-400/80 p0.3 w4 flex justify-center rounded-full'>
+							{count}
+						</span>
 						<Icon onClick={handleOpenCart} icon='eva:shopping-cart-fill' />
 					</ItemHeader>
 				</ul>
