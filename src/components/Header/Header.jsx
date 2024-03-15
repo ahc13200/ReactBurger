@@ -44,10 +44,10 @@ export default function Header() {
 							})}
 						</ul>
 						<ul className='flex wrap list-none text-2xl justify-end gap-3'>
+							<span className='font-semibold text-sm absolute top-3 right-21 bg-yellow-400/80 p0.3 w4 flex justify-center rounded-full'>
+								{count}
+							</span>
 							<ItemHeader>
-								<span className='font-semibold text-sm absolute top-3 right-21 bg-yellow-400/80 p0.3 w4 flex justify-center rounded-full'>
-									{count}
-								</span>
 								<Icon onClick={handleOpenCart} icon='eva:shopping-cart-fill' />
 							</ItemHeader>
 						</ul>

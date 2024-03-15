@@ -46,9 +46,10 @@ export function CartProvider({children}) {
 		const products = [...state.cart_products];
 		const productIndex = products.findIndex((p) => p.product.id === product.id);
 		products[productIndex].quantity--;
-		state.countItem--;
+
 		if (products[productIndex].quantity == 0) {
 			products.splice(productIndex, 1);
+			state.countItem--;
 			toast.success(`${product.name} removed from cart`, {
 				style: {
 					borderRadius: '30px',

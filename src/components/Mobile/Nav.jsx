@@ -22,7 +22,7 @@ export default function Nav() {
 				</div>
 				<ul className='flex wrap list-none text-xl gap2 justify-end pr10'>
 					<ItemHeader isMobile>
-						<span className='font-semibold text-sm absolute top-2.5 right-15 bg-yellow-400/80 p0.3 w4 flex justify-center rounded-full'>
+						<span className='font-semibold text-sm absolute top-2.5 right-15 bg-yellow-400/80 p0.3 w4 flex justify-center rounded-full hover:text-white'>
 							{count}
 						</span>
 						<Icon onClick={handleOpenCart} icon='eva:shopping-cart-fill' />
