@@ -3,7 +3,8 @@ import {CartContext} from '../../store/useCartStore';
 import {useContext} from 'react';
 
 // const baseURL = 'http://localhost:3000/';
-const baseURL = 'https://api.burguer.regiondev.org/';
+const baseURL = 'https://api-reactburger.amandita.me/';
+
 
 export default function Card({product}) {
 	const {addToCart} = useContext(CartContext);
