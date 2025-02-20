@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const baseURL = 'http://localhost:3000/';
-const baseURL = 'https://api.burguer.regiondev.org/';
+const baseURL = 'https://api-reactburger.amandita.me/';
 
 export async function listFetch(endpoint) {
 	const response = await axios.get(`${baseURL}` + endpoint);
